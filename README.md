@@ -16,9 +16,6 @@ Sigue estos pasos para instalar y configurar el proyecto:
 7. Inicia el servidor de desarrollo:
 8. Abre tu navegador y ve a [localhost:8000](http://localhost:8000).
 
-## Uso
-> Aquí deberías incluir ejemplos sobre cómo usar tu aplicación, hacer peticiones a los endpoints, etc. Dado que los endpoints no se generaron automáticamente, asegúrate de documentarlos manualmente aquí.
-
 ## Rutas API REST
 
 Este proyecto soporta las operaciones CRUD básicas (Crear, Leer, Actualizar, Eliminar) a través de los siguientes endpoints:
