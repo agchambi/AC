@@ -1,4 +1,4 @@
-# Backend Biblioteca
+# Backend Biblioteca por Antony G. Chambi
 
 ## Descripción
 Este proyecto es el backend para una aplicación de biblioteca. Este documento se intentó generar mediante Swagger; sin embargo, debido a problemas con la configuración de Laravel, no se pudo generar los endpoints automáticamente.
