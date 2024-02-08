@@ -13,15 +13,15 @@ class Prestamos extends Migration
      */
     public function up()
     {
-        Schema::create('prestamos', function(Blueprint $table) {
+        Schema::create('prestamos', function (Blueprint $table) {
             $table->id();
-            $table->integer('libro_id');
-            $table->integer('cliente_id');
-            $table->timestamp('fecha_prestamo')->nullable();
-            $table->integer('dias_prestamo')->unsigned()->nullable()->default(12);
-            $table->string('estado');
-            $table->timestamp('updated_at')->nullable();
-            $table->timestamp('created_at')->nullable();
+            $table->foreignId('libro_id')->constrained()->onDelete('cascade');
+            $table->foreignId('cliente_id')->constrained()->onDelete('cascade');
+            $table->date('fecha_prestamo');
+            $table->unsignedInteger('dias_prestamo');
+            $table->tinyInteger('estado')->default(0);
+            $table->timestamps();
+            $table->boolean('isActive')->default(1);
         });
     }
 

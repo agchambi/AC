@@ -7,6 +7,8 @@ use App\Models\Autor;
 use App\Models\Libro;
 use App\Models\Cliente;
 use App\Models\Prestamos;
+use App\Models\AutorLibro;
+
 
 class DatabaseSeeder extends Seeder
 {
@@ -21,5 +23,7 @@ class DatabaseSeeder extends Seeder
         Libro::factory(500)->create();
         Cliente::factory(6)->create();
         Prestamos::factory(1000)->create();
+        AutorLibro::factory(50)->create();
+
     }
 }

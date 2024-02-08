@@ -5,11 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Cliente extends Model
+class AutorLibro extends Model
 {
     use HasFactory;
-
-    protected $table = 'clientes';
+    protected $table = 'autor_libro';
     protected $hidden = ['created_at', 'updated_at'];
-    protected $fillable = ['nombre','email','celular','isActive'];
 }

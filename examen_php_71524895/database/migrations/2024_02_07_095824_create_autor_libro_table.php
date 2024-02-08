@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Libro extends Migration
+class CreateAutorLibroTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,11 @@ class Libro extends Migration
      */
     public function up()
     {
-        Schema::create('libros', function(Blueprint $table) {
+        Schema::create('autor_libro', function (Blueprint $table) {
             $table->id();
-            $table->string('titulo');
-            $table->string('lote');
-            $table->text('descripcion');
-            $table->timestamp('updated_at')->nullable();
-            $table->timestamp('created_at')->nullable();
+            $table->foreignId('autor_id')->constrained()->onDelete('cascade');
+            $table->foreignId('libro_id')->constrained()->onDelete('cascade');
+            $table->timestamps();
             $table->boolean('isActive')->default(1);
         });
     }
@@ -31,6 +29,6 @@ class Libro extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('libros');
+        Schema::dropIfExists('autor_libro');
     }
 }

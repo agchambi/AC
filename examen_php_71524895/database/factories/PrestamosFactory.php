@@ -10,7 +10,7 @@ class PrestamosFactory extends Factory
 
     /**
      * The name of the factory's corresponding model.
-     * 
+     *
      * @var string
      */
     protected $model = Prestamos::class;
@@ -27,7 +27,7 @@ class PrestamosFactory extends Factory
             'cliente_id' => $this->faker->numberBetween(1, 6),
             'fecha_prestamo' => $this->faker->dateTimeBetween('-3 years', '-1 week'),
             'dias_prestamo' => $this->faker->numberBetween(1, 30),
-            'estado' => $this->faker->randomElement(['En Prestamo', 'Devuelto']),
+            'estado' => $this->faker->randomElement([0, 1]),
         ];
     }
 }

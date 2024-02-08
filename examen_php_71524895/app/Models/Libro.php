@@ -10,4 +10,8 @@ class Libro extends Model
     use HasFactory;
 
     protected $table = 'libros';
+    protected $hidden = ['created_at', 'updated_at'];
+    protected $fillable = ['titulo','descripcion','isActive'];
+
+
 }
